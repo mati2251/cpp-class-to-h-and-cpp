@@ -1,4 +1,9 @@
 #!/bin/bash
+cd declarations
 make
-./declarations.out < $1 > $2.h
-./definitions.out < $1 > $2.cpp
+cd ..
+cd definitions 
+make
+cd ..
+./declarations/declarations.out < $1 > $2.h
+./definitions/definitions.out < $1 > $2.cpp
